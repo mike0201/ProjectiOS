@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RestoAround" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uf4-ak-cEN">
+                                <rect key="frame" x="91" y="46" width="240" height="128"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ebr-vw-mok"/>
+                                </connections>
+                            </mapView>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eGX-NS-dlr">
+                                <rect key="frame" x="185" y="472" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="Bf4-8G-fkx"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uf4-ak-cEN" secondAttribute="bottom" id="0du-xf-tFf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eGX-NS-dlr" secondAttribute="trailing" id="Lx9-zw-9md"/>
+                            <constraint firstItem="uf4-ak-cEN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UHl-tE-whh"/>
+                            <constraint firstItem="eGX-NS-dlr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gSz-D8-JEg"/>
+                            <constraint firstItem="uf4-ak-cEN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="r4Y-05-q6N"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eGX-NS-dlr" secondAttribute="bottom" id="sXf-Lp-fqm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uf4-ak-cEN" secondAttribute="trailing" id="t4D-ZS-wvU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="maMap" destination="uf4-ak-cEN" id="Arz-Iv-6PJ"/>
+                        <outlet property="myWebView" destination="eGX-NS-dlr" id="m0V-Tx-NfT"/>
+                        <outlet property="myWebViewHeight" destination="Bf4-8G-fkx" id="hkt-mA-znc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
